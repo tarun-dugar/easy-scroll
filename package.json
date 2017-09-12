@@ -1,0 +1,31 @@
+{
+  "name": "easy-scroll",
+  "version": "0.0.1",
+  "description": "A jQuery independent lib to smooth scroll a container over a duration using transition timing functions or bezier curve points.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarun-dugar/easy-scroll.git"
+  },
+  "keywords": [
+    "smooth-scroll",
+    "scroll",
+    "animation",
+    "easing",
+    "bezier"
+  ],
+  "author": "Tarun Dugar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarun-dugar/easy-scroll/issues"
+  },
+  "homepage": "https://github.com/tarun-dugar/easy-scroll#readme",
+  "dependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "webpack": "3.5.6"
+  }
+}
