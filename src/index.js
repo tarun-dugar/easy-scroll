@@ -12,7 +12,7 @@ const smoothScroll = ({
 
   let startTime;
   const initialScrollLeftPosition = scrollableDomEle.scrollLeft;
-  const totalScroll = scrollableDomEle.clientWidth - window.innerWidth - initialScrollLeftPosition;
+  const totalScroll = scrollableDomEle.scrollWidth - initialScrollLeftPosition;
 
 
   const scrollOnNextTick = (timestamp) => {
