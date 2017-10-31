@@ -18,6 +18,8 @@ const B4 = (t) => {
 http://13thparallel.com/archive/bezier-curves/
 http://greweb.me/2012/02/bezier-curve-based-easing-functions-from-concept-to-implementation/
 */
-export default getScrollTo = ({ percentTimeElapsed, C1, C2, C3, C4 }) => {
-  return 1 - (C1 * B1(percentTimeElapsed) + C2 * B2(percentTimeElapsed) + C3 * B3(percentTimeElapsed) + C4 * B4(percentTimeElapsed));
+const getScrollTo = ({ percentTimeElapsed, x1, y1, x2, y2 }) => {
+  return 1 - (x1 * B1(percentTimeElapsed) + y1 * B2(percentTimeElapsed) + x2 * B3(percentTimeElapsed) + y2 * B4(percentTimeElapsed));
 };
+
+export default getScrollTo;
