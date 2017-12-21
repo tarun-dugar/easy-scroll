@@ -1,6 +1,3 @@
-# easy-scroll
-A lightweight native javascript library to perform smooth scrolling.
-
 ## Features
 - ~3 KB before gzip
 - no dependencies like jQuery
@@ -41,6 +38,9 @@ A function is exported by default which accepts an object with the following con
 | **direction** (required)           |  the direction in which you want the element to scroll - top, left, bottom, right 
 | **duration** (required) | the duration in milliseconds over which you want the scrolling to happen |
 | **easingPreset** | linear(default), easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, easeOutQuint, easeInOutQuint |
-| **cubicBezierPoints** | object containing the 4 points to define a bezier curve ```{ 'x1': Number(>= 0), 'y1': Number, 'x2': Number(>= 0), 'y2': Number }```|
+| **cubicBezierPoints** | object containing the 4 points to define a bezier curve <br/>```{ 'x1': Number(>= 0), 'y1': Number, 'x2': Number(>= 0), 'y2': Number }```|
 | **onRefUpdateCallback**| callback function which is called on each tick of the scroll. The current instance of the scrolling animation is passed as an argument by default. You can use `cancelAnimationFrame` on this instance to cancel the scrolling.|
 | **onAnimationCompleteCallback** | callback function which is called after the scrolling is done |
+
+## Browser Support
+Supported on all modern browsers. For older browsers, you would need the polyfills for `requestAnimationFrame` and `cancelAnimationFrame`.
