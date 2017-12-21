@@ -4,3 +4,4 @@ webpack.config.js
 yarn.lock
 npm-debug.log
 .gitignore
+.vscode

@@ -7,16 +7,14 @@ module.exports = {
     'loaders': [{
       'test': /\.js$/,
       'exclude': /node_modules/,
-      'loader': 'react-hot-loader/webpack'
-    }, {
-      'test': /\.js$/,
-      'exclude': /node_modules/,
       'loader': 'babel-loader'
     }]
   },
   'output': {
     'path': path.resolve(__dirname, './dist'),
     'publicPath': '/',
-    'filename': 'index.js'
+    'filename': 'easy-scroll.js',
+    'library': 'webpackNumbers',
+    'libraryTarget': 'commonjs2'
   }
 }
