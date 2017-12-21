@@ -1,3 +1,5 @@
+A lightweight native javascript library to perform smooth scrolling.
+
 ## Features
 - ~3 KB before gzip
 - no dependencies like jQuery
