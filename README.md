@@ -33,7 +33,7 @@ window.easyScroll
 ```
 
 ## API
-`easyScroll` is a function that accepts a configuration object as an argument which can have the following keys:
+A function is exported by default which accepts an object with the following configuration as an argument:
 
 |         Property       |                             Value                             |
 | ---------------------- | ------------------------------------------------------------- |
