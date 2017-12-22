@@ -39,11 +39,14 @@
 					<label>Direction</label>
 					<label>Easing Preset</label>
 					<label>Scroll Amount</label>
-					<button>Scroll</button>																			
+					<button id="scroll-button">Scroll</button>																			
 				</div>
 				<div>
 					<input type="text" id="duration" />
-					<input type="text" id="direction" />
+					<select id="direction">
+						<option value="right">Right</option>
+						<option value="left">Left</option>
+					</select>
 					<select id="easing-preset">
 						<option value="easeInQuad">easeInQuad</option>
 						<option value="easeOutQuad">easeOutQuad</option>
@@ -64,7 +67,25 @@
 		</div>
 		<script src="https://unpkg.com/easy-scroll"></script>
 		<script>
-			console.log(window.easyScroll);
+			document.getElementById('scroll-button').addEventListener('click', function() {
+				var duration = Number(document.getElementById('duration').value);
+				var direction = document.getElementById('direction').value;
+				var scrollAmount = Number(document.getElementById('amount').value);
+				var easingPreset = document.getElementById('easing-preset').value;
+				var config = {
+					'scrollableDomEle': document.querySelector('.scroll'),
+					'duration': duration,
+					'direction': direction,
+					'easingPreset': easingPreset,
+					'onAnimationCompleteCallback': function() {
+						document.querySelector('.scroll').scrollLeft = 0;
+					}
+				};
+				if (!isNaN(scrollAmount) && scrollAmount > 0) {
+					config.scrollAmount = scrollAmount;
+				}
+				easyScroll.default(config);
+			});
 		</script>
 	</body>
 </html>

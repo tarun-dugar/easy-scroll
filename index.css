@@ -24,6 +24,10 @@ body {
     align-items: center;
 }
 
+select {
+    width: 250px;
+}
+
 .inputs {
     margin-top: 30px;
 }

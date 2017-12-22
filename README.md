@@ -29,7 +29,7 @@ var easyScroll = require('easy-scroll');
 ```
 ### Global variable
 ```
-window.easyScroll
+window.easyScroll.default
 ```
 
 ## API
@@ -58,6 +58,8 @@ easyScroll({
     'scrollAmount': 1000
 });
 ```
+
+**NOTE:** In case of importing via script tag, the usage is `easyScroll.default(config)` instead of `easyScroll(config)`;
 
 ## Browser Support
 Supported on all modern browsers. For older browsers, you would need the polyfills for `requestAnimationFrame` and `cancelAnimationFrame`.
