@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Helvetica;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+
+    background-color: black;
+    margin: 0 10px;
+    border-radius: 8px;
+}
+
+.card:nth-child(odd) {
+    background-color: rgb(0, 141, 206);
+}
+
+.scroll {
+    height: 150px;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+}
+
+.inputs {
+    margin-top: 30px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.controls {
+    margin-top: 30px;
+}
+
+input {
+    outline-style: none;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    margin-left: 8px;
+    border-radius: 4px;
+}
+
+select, label, input {
+    display: block;
+    height: 30px;
+    margin: 10px 0;
+}
+
+label {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+input:focus {
+    border-color: rgb(0, 141, 206);
+}
+
+button {
+    padding:10px 35px;
+    border-radius: 4px;
+    outline-style: none;
+    background-color: rgb(0, 141, 206);
+    color: #fff;
+    border: 0;
+}
+
+button:focus {
+    outline-style: none;
+}

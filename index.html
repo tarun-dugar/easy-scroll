@@ -1,8 +1,70 @@
 <html>
 	<head>
 		<title>Easy Scroll</title>
+		<link rel="stylesheet" href="./index.css" />
 	</head>
 	<body>
-		lol
+		<div class="scroll">
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+		</div>
+		<div class="inputs">
+			<div class="flex flex-center">
+				<div>
+					<label>Duration</label>
+					<label>Direction</label>
+					<label>Easing Preset</label>
+					<label>Scroll Amount</label>
+					<button>Scroll</button>																			
+				</div>
+				<div>
+					<input type="text" id="duration" />
+					<input type="text" id="direction" />
+					<select id="easing-preset">
+						<option value="easeInQuad">easeInQuad</option>
+						<option value="easeOutQuad">easeOutQuad</option>
+						<option value="easeInOutQuad">easeInOutQuad</option>
+						<option value="easeInCubic">easeInCubic</option>
+						<option value="easeOutCubic">easeOutCubic</option>
+						<option value="easeInOutCubic">easeInOutQuad</option>
+						<option value="easeInQuart">easeInQuart</option>
+						<option value="easeOutQuart">easeOutQuart</option>
+						<option value="easeInOutQuart">easeInOutQuart</option>
+						<option value="easeInQuint">easeInQuint</option>
+						<option value="easeOutQuint">easeOutQuint</option>
+						<option value="easeInOutQuint">easeInOutQuint</option>
+					</select>
+					<input type="text" id="amount" />						
+				</div>
+			</div>
+		</div>
+		<script src="https://unpkg.com/easy-scroll"></script>
+		<script>
+			console.log(window.easyScroll);
+		</script>
 	</body>
 </html>
