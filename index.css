@@ -68,6 +68,15 @@ input:focus {
     border-color: rgb(0, 141, 206);
 }
 
+code {
+    white-space: pre-wrap;
+    max-width: 600px;
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    margin-top: 30px;
+}
+
 button {
     padding:10px 35px;
     border-radius: 4px;

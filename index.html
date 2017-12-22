@@ -32,38 +32,61 @@
 			<div class="card"></div>
 			<div class="card"></div>
 		</div>
-		<div class="inputs">
-			<div class="flex flex-center">
-				<div>
-					<label>Duration</label>
-					<label>Direction</label>
-					<label>Easing Preset</label>
-					<label>Scroll Amount</label>
-					<button id="scroll-button">Scroll</button>																			
+		<div class="flex" style="justify-content: space-around;">
+				<code>
+document.getElementById('scroll-button').addEventListener('click', function() {
+	var duration = Number(document.getElementById('duration').value);
+	var direction = document.getElementById('direction').value;
+	var scrollAmount = Number(document.getElementById('amount').value);
+	var easingPreset = document.getElementById('easing-preset').value;
+	var config = {
+		'scrollableDomEle': document.querySelector('.scroll'),
+		'duration': duration,
+		'direction': direction,
+		'easingPreset': easingPreset,
+		'onAnimationCompleteCallback': function() {
+			document.querySelector('.scroll').scrollLeft = 0;
+		}
+	};
+	if (!isNaN(scrollAmount) && scrollAmount > 0) {
+		config.scrollAmount = scrollAmount;
+	}
+	easyScroll.default(config); // .default is used because script tag is used instead of ES6 import or require.
+});
+			</code>
+			<div class="inputs">
+					<div class="flex flex-center">
+						<div>
+							<label>Duration</label>
+							<label>Direction</label>
+							<label>Easing Preset</label>
+							<label>Scroll Amount</label>
+							<button id="scroll-button">Scroll</button>																			
+						</div>
+						<div>
+							<input type="text" id="duration" />
+							<select id="direction">
+								<option value="right">Right</option>
+								<option value="left">Left</option>
+							</select>
+							<select id="easing-preset">
+								<option value="easeInQuad">easeInQuad</option>
+								<option value="easeOutQuad">easeOutQuad</option>
+								<option value="easeInOutQuad">easeInOutQuad</option>
+								<option value="easeInCubic">easeInCubic</option>
+								<option value="easeOutCubic">easeOutCubic</option>
+								<option value="easeInOutCubic">easeInOutQuad</option>
+								<option value="easeInQuart">easeInQuart</option>
+								<option value="easeOutQuart">easeOutQuart</option>
+								<option value="easeInOutQuart">easeInOutQuart</option>
+								<option value="easeInQuint">easeInQuint</option>
+								<option value="easeOutQuint">easeOutQuint</option>
+								<option value="easeInOutQuint">easeInOutQuint</option>
+							</select>
+							<input type="text" id="amount" />						
+						</div>
+					</div>
 				</div>
-				<div>
-					<input type="text" id="duration" />
-					<select id="direction">
-						<option value="right">Right</option>
-						<option value="left">Left</option>
-					</select>
-					<select id="easing-preset">
-						<option value="easeInQuad">easeInQuad</option>
-						<option value="easeOutQuad">easeOutQuad</option>
-						<option value="easeInOutQuad">easeInOutQuad</option>
-						<option value="easeInCubic">easeInCubic</option>
-						<option value="easeOutCubic">easeOutCubic</option>
-						<option value="easeInOutCubic">easeInOutQuad</option>
-						<option value="easeInQuart">easeInQuart</option>
-						<option value="easeOutQuart">easeOutQuart</option>
-						<option value="easeInOutQuart">easeInOutQuart</option>
-						<option value="easeInQuint">easeInQuint</option>
-						<option value="easeOutQuint">easeOutQuint</option>
-						<option value="easeInOutQuint">easeInOutQuint</option>
-					</select>
-					<input type="text" id="amount" />						
-				</div>
-			</div>
 		</div>
 		<script src="https://unpkg.com/easy-scroll"></script>
 		<script>
