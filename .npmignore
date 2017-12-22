@@ -5,3 +5,4 @@ yarn.lock
 npm-debug.log
 .gitignore
 .vscode
+index.html
