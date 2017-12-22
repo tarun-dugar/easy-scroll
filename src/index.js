@@ -58,7 +58,8 @@ const easyScroll = ({
   onRefUpdateCallback,
   duration,
   cubicBezierPoints,
-  easingPreset
+  easingPreset,
+  scrollAmount
 }) => {
 
   let startTime               = null,
@@ -81,7 +82,7 @@ const easyScroll = ({
   }
 
   const initialScrollPosition = scrollableDomEle[scrollDirectionProp];
-  const totalScroll = getTotalScroll({
+  let totalScroll = getTotalScroll({
     isWindow,
     scrollableDomEle,
     elementLengthProp,
@@ -89,6 +90,10 @@ const easyScroll = ({
     isHorizontalDirection,
     scrollLengthProp
   });
+
+  if (!isNaN(scrollAmount) && scrollAmount < totalScroll) {
+    totalScroll = scrollAmount;
+  }
 
   const scrollOnNextTick = (timestamp) => {
     const runTime = timestamp - startTime;
