@@ -45,7 +45,10 @@ document.getElementById('scroll-button').addEventListener('click', function() {
 		'direction': direction,
 		'easingPreset': easingPreset,
 		'onAnimationCompleteCallback': function() {
-			document.querySelector('.scroll').scrollLeft = 0;
+			// reset after scrolling is done
+			setTimeout(function() {
+				document.querySelector('.scroll').scrollLeft = 0;
+			}, 1000)
 		}
 	};
 	if (!isNaN(scrollAmount) && scrollAmount > 0) {
