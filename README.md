@@ -11,7 +11,7 @@ A lightweight native javascript library to perform smooth scrolling.
 
 ## Installation
 ```
-npm install easy-scroll --save-dev
+npm install easy-scroll --save
 ```
 Or you can load it via a script tag as follows:
 ```
