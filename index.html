@@ -54,7 +54,7 @@ document.getElementById('scroll-button').addEventListener('click', function() {
 	if (!isNaN(scrollAmount) && scrollAmount > 0) {
 		config.scrollAmount = scrollAmount;
 	}
-	easyScroll.default(config); // .default is used because script tag is used instead of ES6 import or require.
+	easyScroll(config); // .default is used because script tag is used instead of ES6 import or require.
 });
 			</code>
 			<div class="inputs">
@@ -112,7 +112,7 @@ document.getElementById('scroll-button').addEventListener('click', function() {
 				if (!isNaN(scrollAmount) && scrollAmount > 0) {
 					config.scrollAmount = scrollAmount;
 				}
-				easyScroll.default(config);
+				easyScroll(config);
 			});
 		</script>
 	</body>
