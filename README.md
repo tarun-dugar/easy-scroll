@@ -2,7 +2,7 @@ A lightweight native javascript library to perform smooth scrolling.
 
 ## Features
 - ~3 KB before gzip
-- no dependencies like jQuery
+- no dependencies
 - scrolling in any direction - left, right, bottom, top
 - specify the amount in pixels that needs to be scrolled
 - ability to scroll any kind of scrollable element - window, div etc.
@@ -29,7 +29,7 @@ var easyScroll = require('easy-scroll');
 ```
 ### Global variable
 ```
-window.easyScroll.default
+the variable `easyScroll` attached to `window` or `this` depending on what environment you are using
 ```
 
 ## API
@@ -58,8 +58,6 @@ easyScroll({
     'scrollAmount': 1000
 });
 ```
-
-**NOTE:** In case of importing via script tag, the usage is `easyScroll.default(config)` instead of `easyScroll(config)`;
 
 ## Browser Support
 Supported on all modern browsers. For older browsers, you would need the polyfills for `requestAnimationFrame` and `cancelAnimationFrame`.

@@ -15,6 +15,7 @@ module.exports = {
     'publicPath': '/',
     'filename': 'easy-scroll.js',
     'library': 'easyScroll',
-    'libraryTarget': 'umd'
+    'libraryTarget': 'umd',
+    'umdNamedDefine': true
   }
 }

@@ -30,7 +30,8 @@
     ]
   },
   "homepage": "https://github.com/tarun-dugar/easy-scroll#readme",
-  "dependencies": {
+  "devDependencies": {
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
     "webpack": "3.5.6",
