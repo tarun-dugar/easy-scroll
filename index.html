@@ -36,13 +36,12 @@
 				<code>
 document.getElementById('scroll-button').addEventListener('click', function() {
 	var duration = Number(document.getElementById('duration').value);
-	var direction = document.getElementById('direction').value;
 	var scrollAmount = Number(document.getElementById('amount').value);
 	var easingPreset = document.getElementById('easing-preset').value;
 	var config = {
 		'scrollableDomEle': document.querySelector('.scroll'),
 		'duration': duration,
-		'direction': direction,
+		'direction': 'right',
 		'easingPreset': easingPreset,
 		'onAnimationCompleteCallback': function() {
 			// reset after scrolling is done
@@ -61,17 +60,12 @@ document.getElementById('scroll-button').addEventListener('click', function() {
 					<div class="flex flex-center">
 						<div>
 							<label>Duration</label>
-							<label>Direction</label>
 							<label>Easing Preset</label>
 							<label>Scroll Amount</label>
 							<button id="scroll-button">Scroll</button>																			
 						</div>
 						<div>
 							<input type="text" id="duration" />
-							<select id="direction">
-								<option value="right">Right</option>
-								<option value="left">Left</option>
-							</select>
 							<select id="easing-preset">
 								<option value="easeInQuad">easeInQuad</option>
 								<option value="easeOutQuad">easeOutQuad</option>
@@ -95,13 +89,12 @@ document.getElementById('scroll-button').addEventListener('click', function() {
 		<script>
 			document.getElementById('scroll-button').addEventListener('click', function() {
 				var duration = Number(document.getElementById('duration').value);
-				var direction = document.getElementById('direction').value;
 				var scrollAmount = Number(document.getElementById('amount').value);
 				var easingPreset = document.getElementById('easing-preset').value;
 				var config = {
 					'scrollableDomEle': document.querySelector('.scroll'),
 					'duration': duration,
-					'direction': direction,
+					'direction': 'right',
 					'easingPreset': easingPreset,
 					'onAnimationCompleteCallback': function() {
 						setTimeout(function() {
