@@ -28,9 +28,7 @@ import easyScroll from 'easy-scroll';
 var easyScroll = require('easy-scroll');
 ```
 ### Global variable
-```
 the variable `easyScroll` attached to `window` or `this` depending on what environment you are using
-```
 
 ## API
 A function is exported by default which accepts an object with the following configuration as an argument:
