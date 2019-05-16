@@ -38,7 +38,8 @@ const getTotalScroll = ({
   elementLengthProp,
   initialScrollPosition,
   isHorizontalDirection,
-  scrollLengthProp
+  scrollLengthProp,
+  direction
 }) => {
   let totalScroll;
   
@@ -48,7 +49,7 @@ const getTotalScroll = ({
   } else {
     totalScroll = scrollableDomEle[scrollLengthProp] - scrollableDomEle[elementLengthProp];
   }
-  return totalScroll - initialScrollPosition;
+  return ['left', 'top'].includes(direction) ? initialScrollPosition :totalScroll - initialScrollPosition;
 }
 
 const easyScroll = ({
@@ -88,7 +89,8 @@ const easyScroll = ({
     elementLengthProp,
     initialScrollPosition,
     isHorizontalDirection,
-    scrollLengthProp
+    scrollLengthProp,
+    direction
   });
 
   if (!isNaN(scrollAmount) && scrollAmount < totalScroll) {
@@ -109,7 +111,7 @@ const easyScroll = ({
       const scrollToForThisTick = (
         isToBottomOrToRight ? 
         scrollAmt + initialScrollPosition : 
-        totalScroll - scrollAmt - initialScrollPosition
+        totalScroll - scrollAmt
       );
 
       if (runTime < duration) {
