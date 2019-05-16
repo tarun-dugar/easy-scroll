@@ -1,6 +1,6 @@
 {
   "name": "easy-scroll",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "main": "dist/easy-scroll.js",
   "description": "A tiny native JavaScript library to facilitate smooth scroll in an HTML element over a duration using transition timing functions or bezier curve points.",
   "scripts": {
