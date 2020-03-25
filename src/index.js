@@ -127,8 +127,24 @@ const easyScroll = ({
         } else {
           requestAnimationFrame(scrollOnNextTick);
         }
-      } else if (onAnimationCompleteCallback) {
-        onAnimationCompleteCallback();
+      } else {
+        // Ensure 100% scroll completion
+        const scrollAmt = totalScroll;
+        const scrollToForFinalTick = (
+          isToBottomOrToRight ? 
+          scrollAmt + initialScrollPosition : 
+          totalScroll - scrollAmt
+        );
+        if (isWindow) {
+          const xScrollTo = isHorizontalDirection ? scrollToForFinalTick : 0;
+          const yScrollTo = isHorizontalDirection ? 0 : scrollToForFinalTick;
+          window.scrollTo(xScrollTo, yScrollTo);
+        } else {
+          scrollableDomEle[scrollDirectionProp] = scrollToForFinalTick;        
+        }
+        // Run callback
+        if (onAnimationCompleteCallback)
+          onAnimationCompleteCallback();
       }
     }
   }
