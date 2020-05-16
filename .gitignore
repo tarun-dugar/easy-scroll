@@ -3,3 +3,6 @@ npm-debug.log
 .DS_Store
 .vscode
 node_modules/
+example/
+yarn-error.log
+package-lock.json

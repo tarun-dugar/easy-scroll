@@ -1,11 +1,10 @@
 {
   "name": "easy-scroll",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "main": "dist/easy-scroll.js",
   "description": "A tiny native JavaScript library to facilitate smooth scroll in an HTML element over a duration using transition timing functions or bezier curve points.",
   "scripts": {
-    "build": "webpack -p",
-    "prepublish": "npm install && npm run build"
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -33,11 +32,11 @@
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
-    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-add-module-exports": "0.2.1",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
     "react-hot-loader": "3.0.0-beta.7",
     "webpack": "3.5.6",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "3.3.2"
   }
 }
